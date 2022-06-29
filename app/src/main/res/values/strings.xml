@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProContact</string>
+    <string name="title_home">Contacts</string>
+    <string name="title_dashboard">Fix_Manage</string>
+</resources>
