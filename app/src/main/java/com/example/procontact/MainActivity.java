@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // opening a new activity on below line.
+                
                 Intent i = new Intent(MainActivity.this, CreateNewContactActivity.class);
                 startActivity(i);
             }
