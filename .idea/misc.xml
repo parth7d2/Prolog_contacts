@@ -3,16 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.1681654676258993" />
         <entry key="../../../Library/Android/sdk/platforms/android-32/data/res/drawable/btn_plus.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2805" />
+        <entry key="app/src/main/res/drawable/edit_back.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_baseline_build_24.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2805" />
+        <entry key="app/src/main/res/drawable/ic_round_add_24.xml" value="0.2805" />
+        <entry key="app/src/main/res/drawable/ic_round_arrow_back_ios_24.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_round_build_24.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_round_person_24.xml" value="0.13" />
+        <entry key="app/src/main/res/drawable/ic_round_person_outline_24.xml" value="0.2805" />
+        <entry key="app/src/main/res/drawable/ic_round_search_24.xml" value="0.2805" />
+        <entry key="app/src/main/res/layout/activity_contact_detail.xml" value="0.23052536231884058" />
+        <entry key="app/src/main/res/layout/activity_create_new_contact.xml" value="0.4119791666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3342391304347826" />
+        <entry key="app/src/main/res/layout/contacts_rv_item.xml" value="0.4119791666666667" />
+        <entry key="app/src/main/res/layout/ctivity_contact_detail.xml" value="0.4119791666666667" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.41302083333333334" />
