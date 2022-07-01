@@ -1,9 +1,12 @@
 package com.example.procontact.ui.contacts;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -43,12 +46,13 @@ import java.util.List;
 import com.example.procontact.databinding.FragmentHomeBinding;
 
 
-public class ContactsFragment extends Fragment {
+public class ContactsFragment extends Fragment implements ContactRVAdapter.OnNoteListener{
     private FragmentHomeBinding binding;
     private ArrayList<ContactsModal> contactsModalArrayList;
     private RecyclerView contactRV;
     private ContactRVAdapter contactRVAdapter;
     private ProgressBar loadingPB;
+    EditText editText;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 //        ContactsViewModel contactsViewModel =
@@ -67,6 +71,24 @@ public class ContactsFragment extends Fragment {
         loadingPB = view.findViewById(R.id.idPBLoading);
         prepareContactRV();
         readContacts();
+
+        editText = view.findViewById(R.id.editTextTextPersonName);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                filter(editable.toString());
+            }
+        });
 
 
         return view;
@@ -91,7 +113,7 @@ public class ContactsFragment extends Fragment {
 
     private void prepareContactRV() {
         // in this method we are preparing our recycler view with adapter.
-        contactRVAdapter = new ContactRVAdapter(getContext(), contactsModalArrayList);
+        contactRVAdapter = new ContactRVAdapter(getContext(), contactsModalArrayList, this);
         // on below line we are setting layout manager.
         contactRV.setLayoutManager(new LinearLayoutManager(getActivity()));
         // on below line we are setting adapter to our recycler view.
@@ -140,32 +162,6 @@ public class ContactsFragment extends Fragment {
     }
 
 
-
-//    private void getContacts() {
-//        String contactId = "";
-//        String displayName = "";
-//        Cursor cursor = getActivity().getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null, null, null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
-//        // on blow line we are checking the count for our cursor.
-//        if (cursor.getCount() > 0) {
-//            // if the count is greater than 0 then we are running a loop to move our cursor to next.
-//            while (cursor.moveToNext()) {
-//                // on below line we are getting the phone number.
-//                int hasPhoneNumber = Integer.parseInt(cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER)));
-//                if (hasPhoneNumber > 0) {
-//                    // we are checking if the has phone number is > 0
-//                    // on below line we are getting our contact id and user name for that contact
-//                    contactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
-//                    displayName = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-//                }
-//            }
-//        }
-//        // on below line we are closing our cursor.
-//        cursor.close();
-//        // on below line we are hiding our progress bar and notifying our adapter class.
-//        loadingPB.setVisibility(View.GONE);
-//        contactRVAdapter.notifyDataSetChanged();
-//    }
-
     void readContacts(){
         Cursor phones = getActivity().getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,null,null, null);
         while (phones.moveToNext())
@@ -178,6 +174,11 @@ public class ContactsFragment extends Fragment {
         contactRVAdapter.notifyDataSetChanged();
         phones.close();
         loadingPB.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onNoteClick(int position) {
+
     }
 
 //    @Override

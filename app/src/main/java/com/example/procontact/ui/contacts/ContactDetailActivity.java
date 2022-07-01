@@ -123,7 +123,7 @@ public class ContactDetailActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + contactNumber));
 
-        intent.putExtra("sms_body", "Enter your messaage");
+        intent.putExtra("sms_body", "");
 
         startActivity(intent);
 
@@ -145,13 +145,11 @@ public class ContactDetailActivity extends AppCompatActivity {
 
         // on below line we are checking if the calling permissions are granted not.
 
-        if (ActivityCompat.checkSelfPermission(ContactDetailActivity.this,
-
-                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-            return;
-
-        }
+//        if (ActivityCompat.checkSelfPermission(ContactDetailActivity.this,
+//
+//                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+//            return;
+//        }
 
         // at last we are starting activity.
 

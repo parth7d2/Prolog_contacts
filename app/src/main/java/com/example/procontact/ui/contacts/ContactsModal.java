@@ -2,6 +2,7 @@ package com.example.procontact.ui.contacts;
 
 public class ContactsModal {
 
+
     private String userName;
 
     private String contactNumber;
