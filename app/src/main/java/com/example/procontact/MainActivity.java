@@ -38,15 +38,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-        final FloatingActionButton fab = binding.idFABadd;
-        fab.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent i = new Intent(MainActivity.this, CreateNewContactActivity.class);
-                startActivity(i);
-            }
-        });
     }
 
 }

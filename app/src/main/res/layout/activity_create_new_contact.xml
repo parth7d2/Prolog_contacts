@@ -11,7 +11,7 @@
 
     android:orientation="vertical"
 
-    tools:context=".CreateNewContactActivity">
+    tools:context=".ui.contacts.CreateNewContactActivity">
 
 
 

@@ -1,5 +1,6 @@
 package com.example.procontact.ui.contacts;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -7,47 +8,32 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import android.Manifest;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.Settings;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.SearchView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.DexterError;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.PermissionRequestErrorListener;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+
+import com.example.procontact.MainActivity;
+import com.example.procontact.databinding.FragmentHomeBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import com.example.procontact.R;
-import java.util.List;
-
-
-import com.example.procontact.databinding.FragmentHomeBinding;
 
 
 public class ContactsFragment extends Fragment implements ContactRVAdapter.OnNoteListener{
-    private FragmentHomeBinding binding;
+//    private FragmentHomeBinding binding;
     private ArrayList<ContactsModal> contactsModalArrayList;
     private RecyclerView contactRV;
     private ContactRVAdapter contactRVAdapter;
@@ -58,14 +44,14 @@ public class ContactsFragment extends Fragment implements ContactRVAdapter.OnNot
 //        ContactsViewModel contactsViewModel =
 //                new ViewModelProvider(this).get(ContactsViewModel.class);
 //
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+//        binding = FragmentHomeBinding.inflate(inflater, container, false);
+//        View root = binding.getRoot();
 
 
 //        final TextView textView = binding.textHome;
 //        contactsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        View view = inflater.inflate(R.layout.fragment_home, null);
+        View view = inflater.inflate(R.layout.fragment_home,container, false);
         contactsModalArrayList = new ArrayList<>();
         contactRV = view.findViewById(R.id.idRVContacts);
         loadingPB = view.findViewById(R.id.idPBLoading);
@@ -90,6 +76,14 @@ public class ContactsFragment extends Fragment implements ContactRVAdapter.OnNot
             }
         });
 
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.idFABadd);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), CreateNewContactActivity.class);
+                startActivity(i);
+            }
+        });
 
         return view;
     }

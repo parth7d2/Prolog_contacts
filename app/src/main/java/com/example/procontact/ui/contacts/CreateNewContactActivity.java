@@ -1,4 +1,4 @@
-package com.example.procontact;
+package com.example.procontact.ui.contacts;
 
 
 
@@ -26,6 +26,8 @@ import androidx.annotation.Nullable;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.procontact.MainActivity;
+import com.example.procontact.R;
 
 
 public class CreateNewContactActivity extends AppCompatActivity {
