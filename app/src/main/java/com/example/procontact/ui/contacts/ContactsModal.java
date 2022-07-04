@@ -40,4 +40,5 @@ public class ContactsModal {
         this.contactNumber = contactNumber;
 
     }
+
 }
