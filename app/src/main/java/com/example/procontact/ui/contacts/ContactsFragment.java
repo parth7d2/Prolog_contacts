@@ -26,26 +26,30 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.procontact.MainActivity;
 import com.example.procontact.databinding.FragmentHomeBinding;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import com.example.procontact.R;
+import com.trendyol.bubblescrollbarlib.BubbleScrollBar;
+import com.trendyol.bubblescrollbarlib.BubbleTextProvider;
 
 
 public class ContactsFragment extends Fragment implements ContactRVAdapter.OnNoteListener{
-//    private FragmentHomeBinding binding;
+    private FragmentHomeBinding binding;
     private ArrayList<ContactsModal> contactsModalArrayList;
     private RecyclerView contactRV;
     private ContactRVAdapter contactRVAdapter;
     private ProgressBar loadingPB;
+    BubbleScrollBar bubbleScrollBar;
     EditText editText;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 //        ContactsViewModel contactsViewModel =
 //                new ViewModelProvider(this).get(ContactsViewModel.class);
 //
-//        binding = FragmentHomeBinding.inflate(inflater, container, false);
-//        View root = binding.getRoot();
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
 
 
 //        final TextView textView = binding.textHome;
@@ -76,12 +80,31 @@ public class ContactsFragment extends Fragment implements ContactRVAdapter.OnNot
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.idFABadd);
+        ExtendedFloatingActionButton fab = (ExtendedFloatingActionButton) view.findViewById(R.id.idFABadd);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), CreateNewContactActivity.class);
-                startActivity(i);
+                startActivity(new Intent(getActivity(), CreateNewContactActivity.class));
+            }
+        });
+
+        contactRV.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (dy <= 0) {
+                    fab.extend();
+                } else {
+                    fab.shrink();
+                }
+            }
+        });
+
+        bubbleScrollBar = view.findViewById(R.id.bubble_scroll);
+        bubbleScrollBar.setBubbleTextProvider(new BubbleTextProvider() {
+            @Override
+            public String provideBubbleText(int i) {
+                return null;
             }
         });
 
