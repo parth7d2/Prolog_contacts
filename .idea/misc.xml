@@ -12,10 +12,13 @@
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2805" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/ic_legacy_icon__design___export___1_.xml" value="0.1935" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_round_add_24.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_round_arrow_back_ios_24.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_round_build_24.xml" value="0.2805" />
+        <entry key="app/src/main/res/drawable/ic_round_done_outline_24.xml" value="0.213" />
         <entry key="app/src/main/res/drawable/ic_round_person_24.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_round_person_outline_24.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/ic_round_search_24.xml" value="0.2805" />
@@ -23,15 +26,18 @@
         <entry key="app/src/main/res/drawable/ic_text_bubble_fill__1_.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/text_bubble.xml" value="0.2805" />
         <entry key="app/src/main/res/layout/activity_contact_detail.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_create_new_contact.xml" value="0.4119791666666667" />
+        <entry key="app/src/main/res/layout/activity_create_new_contact.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3342391304347826" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.335" />
         <entry key="app/src/main/res/layout/contacts_rv_item.xml" value="0.4119791666666667" />
         <entry key="app/src/main/res/layout/ctivity_contact_detail.xml" value="0.4119791666666667" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.41302083333333334" />
+        <entry key="app/src/main/res/layout/splash_activity.xml" value="0.335" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.37222222222222223" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.213" />
       </map>
     </option>
   </component>

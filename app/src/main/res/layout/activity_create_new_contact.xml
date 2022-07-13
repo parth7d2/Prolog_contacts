@@ -1,90 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-
-    android:orientation="vertical"
-
+    android:padding="10dp"
     tools:context=".ui.contacts.CreateNewContactActivity">
 
+    <!--ImageView: For contact thumbnail/image-->
+    <ImageView
+        android:id="@+id/thumbnailIv"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_round_person_24"
+        android:layout_centerHorizontal="true"/>
+
+    <!--EditText: First Name-->
+    <EditText
+        android:id="@+id/firstNameEt"
+        android:layout_below="@id/thumbnailIv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColorHint="#c5c5c5"
+        android:padding="10dp"
+        android:hint="First Name"
+        android:inputType="textPersonName" />
 
 
-    <!--edit text for user name-->
+<!--    EditText: Last Name-->
 
     <EditText
-
-        android:id="@+id/idEdtName"
-
+        android:id="@+id/lastNameEt"
+        android:layout_below="@id/firstNameEt"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColorHint="#c5c5c5"
+        android:padding="10dp"
+        android:hint="Last Name"
+        android:inputType="textPersonName"/>
 
-        android:layout_margin="8dp"
-
-        android:hint="Enter Name"
-
-        android:inputType="text" />
-
-
-
-    <!--edit text for user phone number-->
-
+    <!--EditText: Phone Number (Mobile)-->
     <EditText
-
-        android:id="@+id/idEdtPhoneNumber"
-
+        android:id="@+id/phoneMobileEt"
+        android:layout_below="@id/lastNameEt"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColorHint="#c5c5c5"
+        android:padding="10dp"
+        android:hint="Phone (Mobile)"
+        android:inputType="phone"/>
 
-        android:layout_margin="8dp"
-
-        android:hint="Enter Number"
-
-        android:inputType="phone" />
-
-
-
-    <!--edit text for user email-->
-
+    <!--EditText: Phone Number(Home)-->
     <EditText
-
-        android:id="@+id/idEdtEmail"
-
+        android:id="@+id/phoneHomeEt"
+        android:layout_below="@id/phoneMobileEt"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColorHint="#c5c5c5"
+        android:padding="10dp"
+        android:hint="Phone (Home)"
+        android:inputType="phone"/>
 
-        android:layout_margin="8dp"
-
-        android:hint="Enter Email Address"
-
-        android:inputType="text" />
-
-
-
-    <!--button for saving a new contact-->
-
-    <Button
-
-        android:id="@+id/idBtnAddContact"
-
+    <!--EditText: Email-->
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_below="@id/phoneHomeEt"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColorHint="#c5c5c5"
+        android:padding="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
 
-        android:layout_margin="10dp"
+    <!--EditText:Address-->
+    <EditText
+        android:id="@+id/addressEt"
+        android:layout_below="@id/emailEt"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColorHint="#c5c5c5"
+        android:padding="10dp"
+        android:hint="Address"
+        android:inputType="textPostalAddress"/>
 
-        android:text="Save Contact"
+    <!--FloatingActionButton: To save the contact-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_round_done_outline_24"
+        android:layout_margin="10dp"/>
 
-        android:textAllCaps="false" />
-
-
-
-</LinearLayout>
+</RelativeLayout>

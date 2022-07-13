@@ -59,15 +59,15 @@
             android:layout_gravity="end"
             android:orientation="vertical"
             app:bubbleBackground="@drawable/fast_scroll_thumb"
-            app:thumbBackground="@color/black"
-            app:scrollbarBackground="@color/purple_200"
-            app:bubbleTextSize="8sp"
             app:bubbleElevation="6dp"
             app:bubbleHeight="50dp"
             app:bubbleMargin="4dp"
             app:bubbleMinWidth="50dp"
+            app:bubblePadding="4dp"
             app:bubbleTextColor="@color/white"
-            app:bubblePadding="4dp"/>
+            app:bubbleTextSize="8sp"
+            app:scrollbarBackground="@color/purple_200"
+            app:thumbBackground="@color/black" />
 
 
 

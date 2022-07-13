@@ -15,4 +15,7 @@
     <color name="Purple40">#FF6650a4</color>
     <color name="PurpleGrey40">#FF625b71</color>
     <color name="Pink40">#FF7D5260</color>
+
+    <color name="navigation_bar">#FCF2E6FC</color>
+    <color name="splash_screen">#E81A73E9</color>
 </resources>
