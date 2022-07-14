@@ -12,21 +12,44 @@
         android:id="@+id/thumbnailIv"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/ic_round_person_24"
+        android:src="@drawable/ic_group_2"
         android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/personImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person"
+        android:layout_below="@+id/thumbnailIv"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
+
 
     <!--EditText: First Name-->
     <EditText
         android:id="@+id/firstNameEt"
-        android:layout_below="@id/thumbnailIv"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:textColorHint="#c5c5c5"
-        android:padding="10dp"
+        android:layout_below="@id/thumbnailIv"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/personImage"
+        android:background="@drawable/edit_back"
         android:hint="First Name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+
+    <ImageView
+        android:id="@+id/personImage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person"
+        android:layout_below="@+id/firstNameEt"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
 
 
 <!--    EditText: Last Name-->
@@ -35,52 +58,90 @@
         android:id="@+id/lastNameEt"
         android:layout_below="@id/firstNameEt"
         android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/personImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:textColorHint="#c5c5c5"
+        android:background="@drawable/edit_back"
         android:padding="10dp"
         android:hint="Last Name"
         android:inputType="textPersonName"/>
+
+    <ImageView
+        android:id="@+id/callImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_phone"
+        android:layout_below="@+id/lastNameEt"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
 
     <!--EditText: Phone Number (Mobile)-->
     <EditText
         android:id="@+id/phoneMobileEt"
         android:layout_below="@id/lastNameEt"
         android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/personImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:textColorHint="#c5c5c5"
+        android:background="@drawable/edit_back"
         android:padding="10dp"
         android:hint="Phone (Mobile)"
         android:inputType="phone"/>
+
+    <ImageView
+        android:id="@+id/callImage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_flipphone"
+        android:layout_below="@+id/phoneMobileEt"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
 
     <!--EditText: Phone Number(Home)-->
     <EditText
         android:id="@+id/phoneHomeEt"
         android:layout_below="@id/phoneMobileEt"
         android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/personImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:textColorHint="#c5c5c5"
+        android:background="@drawable/edit_back"
         android:padding="10dp"
         android:hint="Phone (Home)"
         android:inputType="phone"/>
 
+    <ImageView
+        android:id="@+id/emailImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneHomeEt"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_envelope" />
     <!--EditText: Email-->
     <EditText
         android:id="@+id/emailEt"
         android:layout_below="@id/phoneHomeEt"
+        android:layout_toRightOf="@id/personImage"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:textColorHint="#c5c5c5"
+        android:background="@drawable/edit_back"
         android:padding="10dp"
         android:hint="Email"
         android:inputType="textEmailAddress"/>
+
+    <ImageView
+        android:id="@+id/addressImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_outline_location_on_24"
+        android:layout_below="@+id/emailEt"
+        android:padding="10dp"
+        android:layout_marginTop="12dp"
+        />
 
     <!--EditText:Address-->
     <EditText
@@ -88,9 +149,9 @@
         android:layout_below="@id/emailEt"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
+        android:layout_toRightOf="@id/personImage"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:textColorHint="#c5c5c5"
+        android:background="@drawable/edit_back"
         android:padding="10dp"
         android:hint="Address"
         android:inputType="textPostalAddress"/>
