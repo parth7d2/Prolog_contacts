@@ -33,4 +33,4 @@ If you find any issue just put it in the repository issue section, thank you.
  Hit me on
  
 <a href="https://twitter.com/parth7d2"><img src="https://user-images.githubusercontent.com/35039342/55471524-8e24cb00-5627-11e9-9389-58f3d4419153.png" width="60"></a>
-<a href="https://linkedin.com/in/parth02"><img src="https://user-images.githubusercontent.com/35039342/55471530-94b34280-5627-11e9-8c0e-6fe86a8406d6.png" width="60"></a>
+<a href="https://www.linkedin.com/in/parth7d2"><img src="https://user-images.githubusercontent.com/35039342/55471530-94b34280-5627-11e9-8c0e-6fe86a8406d6.png" width="60"></a>
